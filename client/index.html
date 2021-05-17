@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tic-tac-toe</title>
+    <link href="./style/index.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/ico" href="./images/site-icon.ico"/>
+    <script src="./src/minimax.js"></script>
+    <script src="./src/game.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1 id="title">Tic - Tac - Toe</h1>
+      <span id="turn">Player 1's Turn ( X )</span>
+      <br>
+      <span id="scoreboard">0 - 0 - 0</span>
+    </header>
+    <div class="backdrop-window" id="startgame-window">
+      <div class="msg-box">
+        <p>Type in your name</p>
+        <div class="input-wrapper" id="input-field">
+          <div class="input-field" id="p1-field">
+            <input type="text" value="" name="p1" spellcheck="false" class="name-input">
+            <label class="name-label">Player 1</label>
+            <span class="input-placeholder">Player 1</span>
+          </div>
+          <div class="input-field" id="p2-field">
+            <input type="text" value="AI" name="p2" spellcheck="false" class="name-input">
+            <label class="name-label">Player 2</label>
+            <span class="input-placeholder">Player 2</span>
+          </div>
+          <div class="choices-field">
+            <label>
+              <input type="radio" value="ai" name="gamemode" checked>
+              Single-Player
+            </label>
+            <label>
+              <input type="radio" value="normal" name="gamemode">
+              Two-Player
+            </label>
+          </div>
+        </div>
+        <div class="button-container">
+          <button type="button" id="start-button">Play</button>
+        </div>
+      </div>
+    </div>
+    <div class="game">
+      <div class="board">
+        <div class="square top left"></div>
+        <div class="square top middle"></div>
+        <div class="square top right"></div>
+        <div class="square left"></div>
+        <div class="square middle"></div>
+        <div class="square right"></div>
+        <div class="square bottom left"></div>
+        <div class="square bottom middle"></div>
+        <div class="square bottom right"></div>
+      </div>
+    </div>
+    <div class="backdrop-window" id="endgame-window">
+      <div class="msg-box" id="endgame-msg">
+        <p class="msg">Player 1 has Won!</p>
+        <div class="button-container">
+          <button type="button" id="new-game"><i class="fas fa-undo-alt"></i></button>
+        </div>
+      </div>
+    </div>
+    <script src="./src/client.js"></script>
+  </body>
+</html>
